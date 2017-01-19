@@ -1,0 +1,197 @@
+p {
+    margin-top: 0.1em; /* Отступ сверху */
+    margin-bottom: 0.5em; /* Отступ снизу */
+	text-align:center;
+	font-size: 13pt;
+}
+#container {
+
+    width:620px; /* Ширина блока */
+    height: 920px; /* Высота блока */
+	margin:0 auto;
+	box-shadow: 0 0 10px 2px #000000; /* Тень*/
+}
+#header{
+	width:620px; /* Ширина блока */
+	height: 66px; /* Высота блока */
+	/*border-radius:0px; /* Радиус скругления углов*/
+	background: #000000; /* Фоновый цвет блока */
+}
+#logo{
+    width:170px; /* Ширина блока */
+    height: 65px; /* Высота блока */
+	background-image: url(logo1.png);
+	background-position: center left;
+	background-repeat: no-repeat;
+	margin-left:6px;
+	float: left; /* Обтекание по правому краю */	
+}
+#organization{
+	color: #ffffff;
+    width:254px; /* Ширина блока */
+    height: 65px; /* Высота блока */
+	background-position: center right;
+	float: left; /* Обтекание по правому краю */
+}
+#name  {
+	font-size: 15pt;
+}
+#services  {
+	font-size: 10pt;
+}
+#admin{
+    width:180px; /* Ширина блока */
+    height: 57px; /* Высота блока */
+	color:#ffffff;
+	background-repeat: no-repeat;	
+	float: left; /* Обтекание по правому краю */
+	text-align: center;
+	margin-right:3px;
+	margin-top:8px;
+}	
+#admin p {
+	font-size: 10pt;
+}
+#rightpic {
+    float: right; /* Выравнивание по правому краю  */ 
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+}
+#block {
+    width:420px; /* Ширина блока */
+	margin-left: 16%;
+	float: left; /* Обтекание по правому краю */
+}
+#block_tab2 {
+    width:417px; /* Ширина блока */
+    height: 797px; /* Высота блока */
+	border-radius:2px; /* Радиус скругления углов*/
+	border:1px solid #cccccc; /* Ширина вид и цвет рамки */
+}
+#block_tab3{
+    width:417px; /* Ширина блока */
+    height: 797px; /* Высота блока */
+	border-radius:2px; /* Радиус скругления углов*/
+	border:1px solid #cccccc; /* Ширина вид и цвет рамки */
+}
+.tabsLink {
+width:420px; /* Ширина блока */
+height: 610px; /* Высота блока */
+}
+.tabsLink #button{
+    width:137px; /* Ширина блока */
+    height: 35px; /* Высота блока */
+    border:1px solid #cccccc; /* Ширина вид и цвет рамки */
+	color:#000000;
+    text-decoration:none; /* Отсутствие нижней линии */
+	background-color: #ffffff; 
+}
+.tabs {
+    opacity: 0;  /* Прозрачность */
+    visibility: hidden; /* Изначально - спрятан */
+}
+.tab{
+    position:absolute; /* Абсолютное позиционирование */
+    visibility: hidden;    /* Изначально - спрятан */
+    color:#478CFB; /* Цвет */
+    font: bold 12pt; /* Толщина, размер и семейство шрифта */
+}
+.tabs:target+.tab {
+    opacity: 1; /* Убирает прозрачность */
+    visibility: visible; /* Делает видимым */
+}
+#block2{
+    width:407px; /* Ширина блока */
+    height: 130px; /* Высота блока */
+    border:1px solid #cccccc; /* Ширина вид и цвет рамки */
+    border-radius:2px; /* Радиус скругления углов*/
+	padding:5px 0px 0px 10px;
+}
+#block2 p {
+	float: left; /* Обтекание по правому краю */
+	color: black;
+}
+#tabsLink  button{
+	height: 50px;
+}
+#search2 {
+  width: 350px;
+  height: 30px;
+  outline: none;
+  color: #9E9C9C;
+    border:1px solid #cccccc; /* Ширина вид и цвет рамки */
+    border-radius:2px; /* Радиус скругления углов*/
+}
+
+input, button {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+.tab button {
+	width:50px;
+    height: 30px;
+}
+#f1 {
+	margin-top:31px;
+}
+#list {
+	width:120px;
+	height:30px;
+	border:1px solid #cccccc; /* Ширина вид и цвет рамки */
+}
+#search_results{
+    background: #ffffff; /* Фоновый цвет блока */
+	padding:25px 35px 15px 20px;
+	width:362px; /* Ширина блока */
+    height: 620px; /* Высота блока */
+    border:1px solid #cccccc; /* Ширина вид и цвет рамки */
+    border-radius:2px; /* Радиус скругления углов*/	
+}
+
+#info{
+		width:375px;
+    height: 75px;
+}
+#month{
+		width:186px;
+    height: 30px;
+	font-weight:bold;
+	color: #000000;
+	float: left; /* Обтекание по правому краю */
+}
+#month p{
+	font-family: arial;
+	text-align:left;
+	}
+#days{
+	width:185px;
+    height: 30px;
+	font-weight:bold;
+	color: #cccccc;
+	float: left; /* Обтекание по правому краю */
+}
+#days p{
+	font-family: arial;
+	text-align:right;
+	}
+#rate{
+	width:185px;
+    height: 40px;
+	color: #b8b8b8;
+	float: left; /* Обтекание по правому краю */
+}
+#rate p{
+	text-align:left;
+	font-size:14px;
+}
+
+
+
+
+
+
+
+
+
+
+
