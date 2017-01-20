@@ -19,7 +19,7 @@ public class JDBCDataManager implements DataManager {
         DataSourceFactory dataSourceFactory = new DataSourceFactory();
         connection = dataSourceFactory.createDataSource().getConnection();
         connection.setAutoCommit(false);
-    }
+    }     
     @Override
     public double getBill(Building building, int flatNumber){
         try
