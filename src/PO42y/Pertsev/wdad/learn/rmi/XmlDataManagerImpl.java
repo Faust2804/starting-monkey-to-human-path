@@ -1,5 +1,6 @@
 package PO42y.Pertsev.wdad.learn.rmi;
 
+import PO42y.Pertsev.wdad.data.managers.DataManager;
 import PO42y.Pertsev.wdad.learn.xml.XmlTask;
 import java.io.IOException;
 import java.util.Calendar;
@@ -8,7 +9,7 @@ import org.xml.sax.SAXException;
 /**
  * Created by Faust on 19.01.2017.
  */
-class XmlDataManagerImpl implements XmlDataManager {
+class XmlDataManagerImpl implements DataManager {
     private XmlTask xmlTask;
 
     public XmlDataManagerImpl(){

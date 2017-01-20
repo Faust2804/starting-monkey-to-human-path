@@ -10,6 +10,11 @@ public class Flat {
     private double area;
     private List<Registration> registrations;
 
+    public Flat()
+    {
+
+    }
+
     public Flat(int number, int personsQuantity,
                 double area, List<Registration> registrations){
 

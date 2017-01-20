@@ -1,5 +1,6 @@
 package PO42y.Pertsev.wdad.learn.rmi;
 
+import PO42y.Pertsev.wdad.data.managers.DataManager;
 import PO42y.Pertsev.wdad.utils.PreferencesConstantManager;
 import PO42y.Pertsev.wdad.data.managers.PreferencesManager;
 import java.io.IOException;
@@ -7,6 +8,8 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.sql.SQLClientInfoException;
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.List;
 import javax.xml.parsers.ParserConfigurationException;
@@ -19,7 +22,7 @@ public class Client {
     private static PreferencesManager preferencesManager;
     private static final String XML_DATA_MANAGER = "XmlDataManager";
 
-    public static void main(String[] args) throws NotBoundException{
+    public static void main(String[] args) throws ClassNotFoundException, SQLException, NotBoundException{
 
         try {
             preferencesManager = PreferencesManager.getInstance();
@@ -44,7 +47,7 @@ public class Client {
         if(registry != null){
 
             try{
-                XmlDataManager xmlDataManager = (XmlDataManager)registry.lookup(XML_DATA_MANAGER);
+                DataManager xmlDataManager = (DataManager)registry.lookup(XML_DATA_MANAGER);
                 doWork(xmlDataManager);
             }catch (RemoteException | NotBoundException e){
                 System.err.println("Your code don't work");
@@ -53,7 +56,7 @@ public class Client {
         }
     }
 
-    private static void doWork(XmlDataManager xmlDataManager) {
+    private static void doWork(DataManager xmlDataManager) throws ClassNotFoundException, SQLException{
 
         Building b = new Building("michurina",20);
         System.out.println(xmlDataManager.getBill(b, 1));
@@ -81,7 +84,7 @@ public class Client {
         registrationDate.set(Calendar.MONTH, 4);
 
         Registration registration = new Registration(registrationDate, 351, 224, 166, 131);
-        xmlDataManager.setTariff("gas", 110);
+        xmlDataManager.setTariff("gas", 110.0);
         xmlDataManager.addRegistration(b, 3, registration);
     }
 }

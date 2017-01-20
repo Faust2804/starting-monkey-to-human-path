@@ -11,6 +11,10 @@ public class Registration {
     private double electricity;
     private double gas;
 
+    public Registration()
+    {
+    }
+
     public Registration(Calendar date, double coldwater,
                         double hotwater, double electricity, double gas){
         this.date = date;
